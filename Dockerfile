@@ -2,6 +2,7 @@ FROM node
 MAINTAINER awaterman@salesforce.com
 LABEL Description="Vendor=\"Salesforce.com\" Version=\"1.0\""
 RUN apt-get update && \
+apt-get install libc6 && \
 apt-get install -y vim && \
 mkdir /home/cookie && \
 groupadd -r cookie && useradd -r -g cookie cookie && \
